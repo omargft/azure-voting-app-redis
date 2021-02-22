@@ -11,7 +11,7 @@ pipeline {
          steps{
             sh(script: 'whoami')
             sh(script: 'docker images -a')
-            sh(script: 'cd azure-vote ; docker images -a ; sudo docker build -t jenkins-pipeline . ; docker images -a; cd ..')
+            sh(script: 'cd azure-vote ; docker build -t jenkins-pipeline . ; docker images -a ; cd ..')
          }
       }
    }
